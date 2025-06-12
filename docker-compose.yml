@@ -1,6 +1,6 @@
 services:
   bot:
-    build: summer-day-sticker-bot
+    image: summer-day-sticker-bot
     restart: unless-stopped
     env_file: ".env"
     volumes:

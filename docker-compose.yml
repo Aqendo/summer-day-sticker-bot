@@ -1,0 +1,11 @@
+services:
+  bot:
+    build: summer-day-sticker-bot
+    restart: unless-stopped
+    env_file: ".env"
+    volumes:
+      - summerbot_data:/usr/data
+
+volumes:
+  summerbot_data:
+    external: true

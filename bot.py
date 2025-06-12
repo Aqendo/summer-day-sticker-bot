@@ -165,7 +165,7 @@ async def inline_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 def generate_timezone_change_buttons(zone: int) -> List[List[InlineKeyboardButton]]:
     buttons: List[List[InlineKeyboardButton]] = [[] for i in range(27 // 3)]
     for row in range(27 // 3):
-        for zone_hour in range(-14 + row * 3, -14 + (row + 1) * 3):
+        for zone_hour in range(-12 + row * 3, -12 + (row + 1) * 3):
             if zone == zone_hour:
                 buttons[row].append(
                     InlineKeyboardButton(
@@ -200,7 +200,7 @@ async def callback_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -
         not isinstance(update.callback_query, CallbackQuery)
         or not update.callback_query.data
         or not update.callback_query.data.lstrip("-").isdigit()
-        or not -14 <= int(update.callback_query.data) <= 12
+        or not -12 <= int(update.callback_query.data) <= 14
     ):
         return
     zone: int = int(update.callback_query.data)

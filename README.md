@@ -18,7 +18,7 @@ You should set these environments variables:
 
 Alternatively you can set them in .env file at the root of this bot's folder. There is also `.env.example` provided.
 
-What can be as funny as this bot's purpose? **Telegram limitations.** Therefore your bot _should see every sticker it sents before sending them._
+What can be as funny as this bot's purpose? **Telegram limitations.** Therefore your bot _should see every sticker before sending them._
 
 I wrote some little script that will help you get these file_ids. If running locally, start it with
 ```shell
